@@ -36,7 +36,7 @@ impl Color {
     /// * `ColorResult<Color>`, if the `color_str` format is invalid, it will be return ColorError::Format error, else return Color
     /// ## Example
     /// ``` rust
-    /// use colors::Color;
+    /// use iColor::Color;
     /// let color = Color::from("#ff00aa").unwrap();
     /// let color1 = Color::from("#f0a").unwrap();
     /// let color2 = Color::from("#ff00aa80").unwrap();
@@ -286,7 +286,7 @@ impl Color {
     /// * l  - Specify teh Lightness, the value need be between in 0.0 - 1.0
     /// ## Example
     /// ``` rust
-    /// use colors::Color;
+    /// use iColor::Color;
     /// let color = Color::from_hsl(210, 0.79, 0.3).unwrap();
     /// assert_eq!(color.to_hex(), "#104C88");
     /// ```
@@ -320,7 +320,7 @@ impl Color {
     /// * a  - Specify the Alpha, the value need be between in 0.0 - 1.0
     /// ## Example
     /// ``` rust
-    /// use colors::Color;
+    /// use iColor::Color;
     /// let color = Color::from_hsla(210, 0.79, 0.3, 0.5).unwrap();
     /// assert_eq!(color.to_hex(), "#87A5C3");
     /// ```
@@ -337,7 +337,7 @@ impl Color {
     /// * b  - Specify the Blue, the value need be between in 0 - 255
     /// ## Example
     /// ``` rust
-    /// use colors::Color;
+    /// use iColor::Color;
     /// let color = Color::from_rgb(16, 76, 136).unwrap();
     /// assert_eq!(color.to_hex(), "#104C88");
     /// 
@@ -353,7 +353,7 @@ impl Color {
     /// * a  - Specify the Alpha, the value need be between in 0.0 - 1.0
     /// ## Example
     /// ``` rust
-    /// use colors::Color;
+    /// use iColor::Color;
     /// let color = Color::from_rgba(16, 76, 136, 0.5).unwrap();
     /// assert_eq!(color.to_hex(), "#87A5C3");
     /// 
@@ -373,7 +373,7 @@ impl Color {
     /// * k  - Specify the Key (Black), the value need be between in 0.0 - 1.0
     /// ## Example
     /// ``` rust
-    /// use colors::Color;
+    /// use iColor::Color;
     /// let color = Color::from_cmyk(0.5, 0.2, 0.1, 0.1).unwrap();
     /// assert_eq!(color.to_hex(), "#72B7CE");
     /// 
@@ -399,7 +399,7 @@ impl Color {
     /// * v  - Specify the Value, the value need be between in 0.0 - 1.0
     /// ## Example
     /// ``` rust
-    /// use colors::Color;
+    /// use iColor::Color;
     /// let color = Color::from_hsv(210, 0.44, 0.8).unwrap();
     /// assert_eq!(color.to_hex(), "#729FCC");
     /// 
@@ -430,7 +430,7 @@ impl Color {
     /// 
     /// # Example
     /// ``` rust
-    /// use colors::Color;
+    /// use iColor::Color;
     /// let color = Color::from_rgb(255, 0, 0).unwrap();
     /// assert_eq!(color.to_hex(), "#FF0000");
     /// 
@@ -447,7 +447,7 @@ impl Color {
 
     /// Convert the color to a hexadecimal string with alpha representation.
     /// ```
-    /// use colors::Color;
+    /// use iColor::Color;
     /// let color = Color::from_rgba(255, 0, 0, 0.5).unwrap();
     /// assert_eq!(color.to_hex_alpha(), "#FF00007F");
     /// ```
@@ -463,7 +463,7 @@ impl Color {
 
     /// Convert the color to the format required by Excel, where the color format is usually #AARRGGBB, where AA is alpha
     /// ```
-    /// use colors::Color;
+    /// use iColor::Color;
     /// let color = Color::from("#FF0000").unwrap();
     /// assert_eq!(color.to_alpha_hex(), "#FFFF0000");
     /// 
@@ -486,7 +486,7 @@ impl Color {
     /// 
     /// # Example
     /// ```rust
-    /// use colors::Color;
+    /// use iColor::Color;
     /// let color = Color::from("#FF0000").unwrap();
     /// assert_eq!(color.to_rgb(), "rgb(255,0,0)");
     /// 
@@ -505,7 +505,7 @@ impl Color {
     /// 
     /// # Example
     /// ```rust
-    /// use colors::Color;
+    /// use iColor::Color;
     /// let color = Color::from("#FF0000").unwrap();
     /// assert_eq!(color.to_rgba(), "rgba(255,0,0,1)");
     /// 
@@ -561,7 +561,7 @@ impl Color {
     /// 
     /// # Example
     /// ```rust
-    /// use colors::Color;
+    /// use iColor::Color;
     /// let color = Color::from("#FF0000").unwrap();
     /// assert_eq!(color.to_hsl(), "hsl(0,100%,50%)");
     /// 
@@ -576,7 +576,7 @@ impl Color {
 
     /// Convert the color to a CSS HSLA string representation.A
     /// ```
-    /// use colors::Color;
+    /// use iColor::Color;
     /// let color = Color::from("#FF0000").unwrap();
     /// assert_eq!(color.to_hsla(), "hsla(0,100%,50%,1.0)");
     /// 
@@ -591,7 +591,7 @@ impl Color {
 
     /// Convert the color to a CSS HSLA string representation.A
     /// ```rust
-    /// use colors::Color;
+    /// use iColor::Color;
     /// let color = Color::from("#FF0000").unwrap();
     /// assert_eq!(color.to_hsv(), "hsv(0,100%,100%)");
     /// 
@@ -631,7 +631,7 @@ impl Color {
 
     /// Convert the color to a CSS cmyk string representation.A
     /// ```rust
-    /// use colors::Color;
+    /// use iColor::Color;
     /// let color = Color::from("#FF0000").unwrap();
     /// assert_eq!(color.to_cmyk(), "cmyk(0,100,100,0)");
     /// 
@@ -664,7 +664,7 @@ impl Color {
     /// # Example
     ///
     /// ```
-    /// use colors::Color;
+    /// use iColor::Color;
     ///
     /// let mut color = Color::from("#000").unwrap();
     /// color.set_alpha(0.5);
@@ -700,7 +700,7 @@ impl Color {
     /// * `ratio` - A float value between 0.0 and 1.0 representing the ratio by which to reduce the alpha value.
     /// # Example
     /// ```
-    /// use colors::Color;
+    /// use iColor::Color;
     ///
     /// let mut color = Color::from("#000").unwrap();
     /// color.fade(0.5);
@@ -721,7 +721,7 @@ impl Color {
     /// * `ratio` - A float value between 0.0 and 1.0 representing the ratio by which to increase the alpha value.
     /// # Example
     /// ```
-    /// use colors::Color;
+    /// use iColor::Color;
     ///
     /// let mut color = Color::from_rgba(0,0,0,0.3).unwrap();
     /// color.opaquer(0.5);

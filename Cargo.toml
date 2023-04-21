@@ -1,10 +1,11 @@
 [package]
-name = "colors"
+name = "iColor"
 authors = ["flyinsky <flyinksy@gmail.com>"]
 version = "0.1.0"
 edition = "2021"
 license = "MIT OR Apache-2.0"
-keywords = ["colors convert"]
+keywords = ["color", "convert"]
+description = "A relatively universal color format conversion tool. that can convert between #RRGGBB, #RGB, #RRGGBBAA, hsl, hsla, hsv, cmyk."
 
 
 [dependencies]
