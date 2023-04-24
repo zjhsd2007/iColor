@@ -291,7 +291,7 @@ impl Color {
     /// assert_eq!(color.to_hex(), "#104C88");
     /// ```
     pub fn from_hsl(h: u32, s: f32, l: f32) -> ColorResult<Color> {
-        if !utils::is_valid_num(&s) || !utils::is_valid_num(&l) || !(0..360).contains(&h) {
+        if !utils::is_valid_num(&s) || !utils::is_valid_num(&l) || !(0..=360).contains(&h) {
             return Err(ColorError::Value);
         }
         let c = (1.0 - (l * 2.0 - 1.0).abs()) * s;
@@ -404,7 +404,7 @@ impl Color {
     /// assert_eq!(color.to_hex(), "#729FCC");
     /// 
     pub fn from_hsv(h: u32, s: f32, v: f32) -> ColorResult<Color> {
-        if !utils::is_valid_num(&s) || !utils::is_valid_num(&v) || !(0..360).contains(&h) {
+        if !utils::is_valid_num(&s) || !utils::is_valid_num(&v) || !(0..=360).contains(&h) {
             return Err(ColorError::Value);
         }
         let c = v * s;
