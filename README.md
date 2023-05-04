@@ -1,4 +1,4 @@
-This is a relatively universal color format conversion tool that can convert between #RRGGBB, #RGB, #RRGGBBAA, hsl, hsla, hsv, cmyk.
+A relatively universal color format conversion tool that can convert between #RRGGBB, #RGB, #RRGGBBAA, hsl, hsla, hsv, cmyk.
 
 ```rust
 use iColor::Color;
@@ -71,4 +71,8 @@ pub fn opaquer(&mut self, ratio: f32) -> &mut Self
 let mut color = Color::from_rgba(0,0,0,0.3).unwrap();
 color.opaquer(0.5);
 assert_eq!(color.to_rgba(), "rgba(0,0,0,0.45)");
+
+// Generates a random `Color`
+pub fn random() -> Self
+let color = Color::random();
 ```

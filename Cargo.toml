@@ -1,13 +1,15 @@
 [package]
 name = "iColor"
 authors = ["flyinsky <flyinksy@gmail.com>"]
-version = "0.1.3"
+version = "0.1.4"
 edition = "2021"
 license = "MIT OR Apache-2.0"
 keywords = ["color", "convert"]
 description = "A relatively universal color format conversion tool. that can convert between #RRGGBB, #RGB, #RRGGBBAA, hsl, hsla, hsv, cmyk."
+repository = "https://github.com/zjhsd2007/iColor"
 
 
 [dependencies]
 once_cell = "1.17.1"
 regex = "1.7.3"
+rand = "0.8"

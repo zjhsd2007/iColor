@@ -1,4 +1,4 @@
-//! This is a relatively universal color format conversion tool that can convert between #RRGGBB, #RGB, #RRGGBBAA, hsl, hsla, hsv, cmyk.
+//! A relatively universal color format conversion tool that can convert between #RRGGBB, #RGB, #RRGGBBAA, hsl, hsla, hsv, cmyk.
 
 mod utils;
 
@@ -93,6 +93,15 @@ impl Color {
         }
 
         Err(ColorError::Format)
+    }
+    
+    /// Generates a random `Color` instance with random values for red, green, blue, and alpha channels.
+    pub fn random() -> Self {
+        let r = rand::random::<u8>();
+        let g = rand::random::<u8>();
+        let b = rand::random::<u8>();
+        let a = (rand::random::<f32>() * 100.0_f32).round() / 100.0;
+        Self(r,g,b,a)
     }
 
     /// Parses a hexadecimal color string and returns a `Color` instance.
@@ -785,3 +794,4 @@ mod tests {
         
     }
 }
+
